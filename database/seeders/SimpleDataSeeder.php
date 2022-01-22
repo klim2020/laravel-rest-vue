@@ -18,12 +18,15 @@ class SimpleDataSeeder extends Seeder
     public function run()
     {
 
-
-        SimpleData::factory(10)->create()->each(function ($simple_data) {
+        //SimpleData::factory(10)->has(Author::factory())->create();
+        SimpleData::factory(10)->make()->each(function ($simple_data) {
 
             $author = Author::factory()->create();
-            $simple_data->author()->associate($author);
+            $simple_data->authors()->associate($author);
+            $simple_data->save();
 
         });
+
+
     }
 }
