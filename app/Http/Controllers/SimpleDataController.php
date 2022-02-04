@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreSimpleDataRequest;
-use App\Http\Requests\UpdateSimpleDataRequest;
 use App\Models\SimpleData;
+use Illuminate\Http\Request;
 
 class SimpleDataController extends Controller
 {
@@ -15,26 +14,17 @@ class SimpleDataController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+        $datas= SimpleData::all();
+        return response()->json($datas);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreSimpleDataRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreSimpleDataRequest $request)
+    public function store(Request $request)
     {
         //
     }
@@ -47,28 +37,17 @@ class SimpleDataController extends Controller
      */
     public function show(SimpleData $simpleData)
     {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\SimpleData  $simpleData
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(SimpleData $simpleData)
-    {
-        //
+        $datas= SimpleData::all();//
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \App\Http\Requests\UpdateSimpleDataRequest  $request
+     * @param  \Illuminate\Http\Request  $request
      * @param  \App\Models\SimpleData  $simpleData
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateSimpleDataRequest $request, SimpleData $simpleData)
+    public function update(Request $request, SimpleData $simpleData)
     {
         //
     }
@@ -83,4 +62,7 @@ class SimpleDataController extends Controller
     {
         //
     }
+
+
+
 }
