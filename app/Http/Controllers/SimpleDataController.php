@@ -14,8 +14,8 @@ class SimpleDataController extends Controller
      */
     public function index()
     {
-        $datas= SimpleData::all();
-        return response()->json($datas);
+        $datas= SimpleData::with('authors')->get();
+        return response()->json($datas, 200, ['Content-type'=> 'application/json; charset=utf-8'], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT);
     }
 
     /**
@@ -37,7 +37,7 @@ class SimpleDataController extends Controller
      */
     public function show(SimpleData $simpleData)
     {
-        $datas= SimpleData::all();//
+        $datas= SimpleData::with('author')->get();//
     }
 
     /**
