@@ -1,4 +1,5 @@
 <template>
+    
     <BeakerIcon class="h-5 w-5 text-blue-500"/>
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
