@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
 import SimpleData from "@/components/SimpleData";
+import CV from '../components/cv/CV'
 
 const routes = [
   {
@@ -20,7 +21,12 @@ const routes = [
     path:'/data',
     name:'SimpleData',
     component: SimpleData
-  }
+  },
+    {
+        path:'/cv/:lang*',
+        name:'CV',
+        component: CV
+    }
 ]
 
 const router = createRouter({

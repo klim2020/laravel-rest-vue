@@ -1,5 +1,5 @@
 <template>
-    
+
     <BeakerIcon class="h-5 w-5 text-blue-500"/>
     <div class="flex flex-col">
         <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -62,21 +62,39 @@
             </div>
         </div>
     </div>
+
+    <VueTailwindPagination
+        :current="current"
+        :total="total"
+        :per-page="perPage"
+        @page-changed="current = $event"
+
+        text-before-input="Idź do strony"
+        text-after-input="Idź"/>
+
 </template>
 
 <script>
 
 import { BeakerIcon } from '@heroicons/vue/solid';
 import dataProvider from '/src/libs/dataProvider';
+//import '@ocrv/vue-tailwind-pagination/styles';
+import VueTailwindPagination from '@ocrv/vue-tailwind-pagination';
+
 export default {
 
     name: "SimpleData",
-    components: { BeakerIcon },
+    components: { VueTailwindPagination,
+                BeakerIcon },
     data:function(){
         return{
             ascend:false,
             data:'',
-            url:dataProvider.url
+            url:dataProvider.url,
+
+            current: 1,
+            perPage: 2,
+            total: 20
         }
     },
     mounted(){
@@ -87,6 +105,9 @@ export default {
 
     },
     methods:{
+        qq1:function(a){
+            this.current = a;
+        },
         sort: function (type) {
             this.data.sort((a,b)=>{
                 if (this.ascend === true){
