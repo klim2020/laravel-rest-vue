@@ -16,8 +16,9 @@
 </style>
 
 <script>
+import VueFooter from "@/components/VueFooter";
 import VueHeader from "@/components/VueHeader";
 export default {
-    components: {VueHeader}
+    components: {VueHeader , VueFooter}
 }
 </script>
