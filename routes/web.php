@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CvDataController;
 use App\Http\Controllers\SimpleDataController;
 use Illuminate\Support\Facades\Route;
 
@@ -18,3 +19,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::apiResource('simpldata', SimpleDataController::class);
+
+Route::get('/cv/{lang?}', [CvDataController::class,'show']);
