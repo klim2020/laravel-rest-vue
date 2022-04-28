@@ -58,16 +58,7 @@
                         <option value="pl">Pl 🇵🇱</option>
                     </select>
                 </div>
-
-
-
             </div>
-
-
-
-
-
-
     </div>
     <div id="content"  class = "bg-yellow-100 flex flex-basis">
         <div class=" flex-basis-left bg-sky-900 b-blacked flex flex-wrap">
@@ -83,8 +74,6 @@
                     <p class="font-mono float-left flex-basis-50">{{ skill.name }}</p>
                     <ProgressBar :percent="skill.percent" class="float-right flex-basis-50 self-center"></ProgressBar>
                 </div>
-
-
             </div>
 
             <div class="text-block ">
@@ -94,7 +83,6 @@
                     <p class="font-mono float-left flex-basis-50">{{ contact.name }}:</p>
                     <a :href="contact.link">link</a>
                 </div>
-
 
             </div>
         </div>

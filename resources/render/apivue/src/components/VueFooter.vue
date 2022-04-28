@@ -20,7 +20,7 @@ export default {
  #footer {
      display:flex;
      flex-direction:column;
-     justify-content:end;
+     justify-content:center;
      height:100px;
      background-color: lightgreen;
     a {

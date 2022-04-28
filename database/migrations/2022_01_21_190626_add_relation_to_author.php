@@ -29,7 +29,8 @@ class AddRelationToAuthor extends Migration
     public function down()
     {
         Schema::table('simple_data', function (Blueprint $table) {
-            //
+            $table->dropForeign(['authors_id']);//
+            $table->dropColumn('authors_id');
         });
     }
 }

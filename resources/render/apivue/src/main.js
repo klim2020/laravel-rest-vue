@@ -6,4 +6,4 @@ import '../index.css'
 
 
 
-createApp(App).use(router).use(router).mount('#app')
+createApp(App).use(router).mount('#app')

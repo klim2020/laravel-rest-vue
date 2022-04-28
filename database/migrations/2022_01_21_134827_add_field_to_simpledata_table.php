@@ -26,7 +26,7 @@ class AddFieldToSimpledataTable extends Migration
     public function down()
     {
         Schema::table('simple_data', function (Blueprint $table) {
-            //
+            $table->dropColumn('data');
         });
     }
 }

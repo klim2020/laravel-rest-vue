@@ -258,7 +258,7 @@ $background-color:rgba(12, 74, 110, var(--tw-bg-opacity));; //color of your back
     }
     .dashed_underline{
 
-        border-bottom: 3px solid;
+        border-bottom: 3px solid white;
 
         border-image:
             linear-gradient(to right, white  , rgba(0,0,0,0) 60%) 100% 0%;

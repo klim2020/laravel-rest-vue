@@ -1,7 +1,7 @@
 module.exports = {
     purge: {content: [
         "./index.php",
-        "./src/**/*.{vue,js,ts,jsx,tsx}",
+        "./src/**/*.{vue,js,ts,jsx,tsx,tpl}",
     ]},
   theme: {
     extend: {
