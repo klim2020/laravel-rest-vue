@@ -72,13 +72,15 @@ export default {
 
         },
         exportToPDF:function () {
-            console.log(this.$refs.document);
+
             html2pdf(this.$refs.document, {
-                margin: 0,
+                margin: [0, -0.08],
                 filename: 'document.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { dpi: 192, letterRendering: true },
-                jsPDF: { unit: 'in', format: [16.54,11.69], orientation: 'landscape' }
+                //jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
+                jsPDF: { unit: 'in', format: [16.54,11.69], orientation: 'landscape' },
+                pagebreak: {before: '.newPage', avoid: ['h2', 'h3', 'h4', '.field']},
             })
         }
 

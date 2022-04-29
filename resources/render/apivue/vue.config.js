@@ -7,5 +7,7 @@ module.exports = {
     // options...
     publicPath: './vue/',
     //publicPath: './',
-    outputDir: '../../../public/vue'
+    outputDir: '../../../public/vue',
+
+    indexPath: '../../resources/views/vue/index.php'
 }
