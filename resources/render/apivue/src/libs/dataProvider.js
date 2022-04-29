@@ -1,6 +1,6 @@
 
 export default {
-    url : 'http://localhost:8888',
+    url : location.origin,
 
     getSimpleData:async function (){
         return await fetch(this.url+'/simpldata/').then((ret)=>{return ret.json();});
