@@ -1,6 +1,10 @@
 
 export default {
-    url : location.origin,
+    //Server deployment
+    //url : location.origin,
+
+    //Github depl
+    url: 'https://my-portfolio2022-klim.herokuapp.com',
 
     getSimpleData:async function (){
         return await fetch(this.url+'/simpldata/').then((ret)=>{return ret.json();});
