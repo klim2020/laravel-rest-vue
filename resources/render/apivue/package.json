@@ -1,11 +1,13 @@
 {
+  "type": "module",
   "name": "apivue",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "deploy": "node scripts/gh-pages-deploy.js"
   },
   "dependencies": {
     "@heroicons/vue": "^1.0.6",
@@ -15,6 +17,7 @@
     "@vue/cli": "^5.0.4",
     "autoprefixer": "^9.8.8",
     "core-js": "^3.6.5",
+    "execa": "^6.1.0",
     "postcss": "^7.0.39",
     "tailwind": "^4.0.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.17",

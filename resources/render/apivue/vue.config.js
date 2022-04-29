@@ -5,9 +5,12 @@
  */
 module.exports = {
     // options...
-    publicPath: './vue/',
-    //publicPath: './',
-    outputDir: '../../../public/vue',
+    //Server deployment
+    //publicPath: './vue/',
+    //outputDir: '../../../public/vue',
 
-    indexPath: '../../resources/views/vue/index.php'
+    //Github depl
+    publicPath: './',
+
+    //indexPath: '../../resources/views/vue/index.php'
 }
