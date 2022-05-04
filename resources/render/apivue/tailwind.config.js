@@ -1,3 +1,4 @@
+const colors = require('tailwindcss/colors');
 module.exports = {
     purge: {content: [
         "./index.php",
@@ -36,7 +37,30 @@ module.exports = {
                 "700":"#0369a1",
                 "800":"#075985",
                 "900":"#0c4a6e"
-            }
+            },
+            black: colors.black,
+            white: colors.white,
+            rose: colors.rose,
+            pink: colors.pink,
+            fuchsia: colors.fuchsia,
+            purple: colors.purple,
+            violet: colors.violet,
+            indigo: colors.indigo,
+            blue: colors.blue,
+            cyan: colors.cyan,
+            teal: colors.teal,
+            emerald: colors.emerald,
+            green: colors.green,
+            lime: colors.lime,
+            yellow: colors.yellow,
+            amber: colors.amber,
+            orange: colors.orange,
+            red: colors.red,
+            warmGray: colors.warmGray,
+            trueGray: colors.trueGray,
+            gray: colors.gray,
+            blueGray: colors.blueGray,
+            coolGray: colors.coolGray,
         }
     },
   },
