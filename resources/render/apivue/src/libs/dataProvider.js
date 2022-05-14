@@ -15,6 +15,7 @@ export default {
         return await fetch(this.url+'/simpldata/').then((ret)=>{return ret.json();});
     },
     getContacts: async function(lang = 'ru'){
+        console.log(this.url + '/getcontacts/' + lang);
         let ret = await (await fetch(this.url + '/getcontacts/' + lang)).json();
         return await ret;
     },

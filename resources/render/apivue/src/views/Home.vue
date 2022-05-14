@@ -35,16 +35,15 @@
                         They say that if I make my own blog using Laravel + Vue, then it would be much easier to find a job with this stack.
                         For 3 years I was working as a  PHP developer on a small projects(e-commerce mostly) powered by Opencart and Wordpress CMS  mostly.
                         And now I get bored with this CMS, so am looking forward for a new opportunities, I need to grow and discover new horizonts.
-                        So I started my own blog, using Laravel + Vue stack. Hope it will be interesting for you :)
+                        So I started my own blog, using Laravel + Vue stack. So welcome aboard, hope it will be interesting for you :)
                     </p>
                     <div v-if="contacts" class="flex pl-4 overflow-hidden flex-col justify-center pt-6 sm:flex-row lg:justify-start">
                         <div  class="flex items-center justify-center sm:justify-start">
                             <p  class="font-body text-lg font-semibold uppercase text-grey-20">
-                                {{ contacts.contacts_text[0] }}
+                                {{ contacts.contacts_text[0] }} >
                             </p>
-                            <li v-for="(contact,index) in contacts.contacts[0]" :key="index"> <a :href="contact.link" class="social-icon" v-html="contact.text"></a></li>
+                            <div class ="p-2" v-for="(contact,index) in contacts.contacts[0]" :key="index"> <a :href="contact.link" class="social-icon" v-html="contact.text"></a></div>
                         </div>
-
                     </div>
                 </div>
 
@@ -75,14 +74,16 @@ export default {
      },
      async getData(){
         this.homedata = await dataService.getData();
-
+     },
+     async getContacts(){
+         this.contacts = await dataService.getContacts();
      }
   },
   data(){
     return{
         image:'./paralax1.jpg',
-        homedata:'',
-        contacts:''
+        homedata:false,
+        contacts:false,
     }
   },
   beforeMount(){
@@ -90,11 +91,12 @@ export default {
   },
   mounted(){
     dataService.switchPage('home');
-    this.contacts = dataService.getContacts();
+    this.getContacts();
     this.getData();
   },
   watch:{
       $route(){
+          this.getContacts();
           this.getData();
       }
   }

@@ -21,8 +21,9 @@ export default {
       //console.log(this.pages[this.currentPage].path);
       return this.pages[this.currentPage].fn(languageProvider.getLanguageCode());
     },
-    getContacts(lang = 'ru'){
-       return dataProvider.getContacts(lang);
+    getContacts(){
+
+       return dataProvider.getContacts(languageProvider.getLanguageCode());
     }
 
 

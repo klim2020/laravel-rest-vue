@@ -64,7 +64,7 @@ class CvDataController extends Controller
      * @param  \App\Models\CvData  $cvData
      * @return \Illuminate\Http\Response
      */
-    public function contacts(CvData $cvData)
+    public function contacts($lang = null)
     {
         if (!isset($lang)){
             $lang='ru';
