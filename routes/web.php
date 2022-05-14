@@ -20,6 +20,10 @@ Route::get('/', function () {
 });
 Route::apiResource('simpldata', SimpleDataController::class);
 
+Route::get('getcontacts/{lang?}', [CvDataController::class, 'contacts']);
+
 Route::apiResource('cv/{lang?}', CvDataController::class );
+
+
 
 

@@ -50,14 +50,7 @@
                     <li v-for="contact in cvdata2.contacts[0]"> <a :href="contact.link" class="social-icon" v-html="contact.text"></a></li>
                 </ul>
 
-                <div class="float-right shadow text-yellow-200" data-html2canvas-ignore="true">{{ cvdata2.language_text[0] }}
-                    <select @change="languageChange($event)" id="langselector" class="border-2 border-sky-500 rounded bg-sky-800 px-4 py-3 ">
-                        <option value="ru" selected>Ru 🇷🇺</option>
-                        <option value="ua">Ua 🇺🇦</option>
-                        <option value="en">En 🇬🇧</option>
-                        <option value="pl">Pl 🇵🇱</option>
-                    </select>
-                </div>
+
             </div>
     </div>
     <div id="content"  class = "bg-yellow-100 flex flex-basis">

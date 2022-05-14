@@ -14,6 +14,10 @@ export default {
     getSimpleData:async function (){
         return await fetch(this.url+'/simpldata/').then((ret)=>{return ret.json();});
     },
+    getContacts: async function(lang = 'ru'){
+        let ret = await (await fetch(this.url + '/getcontacts/' + lang)).json();
+        return await ret;
+    },
 
 
     getHomeData: async function(lang = 'ru'){

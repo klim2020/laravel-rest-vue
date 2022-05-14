@@ -59,6 +59,24 @@ class CvDataController extends Controller
     }
 
     /**
+     * Display the specified resource.
+     *
+     * @param  \App\Models\CvData  $cvData
+     * @return \Illuminate\Http\Response
+     */
+    public function contacts(CvData $cvData)
+    {
+        if (!isset($lang)){
+            $lang='ru';
+        }
+        $qq = CvDataResource::collection(CvData::where('lang', $lang)->where('valuename','like','%contacts%')->get());
+
+        //$ret = array();
+
+        return response()->json($qq->keyBy('valuename'), 200);
+    }
+
+    /**
      * Show the form for editing the specified resource.
      *
      * @param  \App\Models\CvData  $cvData

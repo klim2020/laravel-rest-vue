@@ -1,17 +1,11 @@
 <template>
 
-
-
-
-
-
-
         <div :class="{'sticky top-0':scrolled}"
              :style="{'top':'-'+(!scrolled)*100+'px'}"
              style="z-index:99999" class="bg-emerald-400 text-white
                                                             transition-all ease-in-out delay-300 duration-2000
                                                             ">
-            <LanguageSelector @languageChange="onSwitchlanguage"></LanguageSelector>
+
             <nav class="flex container mx-auto px-5 py-5">
                 <ul class="flex flex-grow space-x-4">
                     <li>
@@ -50,6 +44,9 @@
                             </ul>
                         </div>
                     </li>
+                </ul>
+                <ul class="flex grow md:grow-0 space-x-4">
+                    <LanguageSelector  @languageChange="onSwitchlanguage"></LanguageSelector>
                 </ul>
                 <ul class="flex sm:hidden" @click="showMenu = !showMenu">
                     <li>
@@ -125,8 +122,6 @@
                 </ul>
             </nav>
         </div>
-
-
 
 </template>
 
