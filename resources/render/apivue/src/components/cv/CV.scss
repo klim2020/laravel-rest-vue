@@ -23,12 +23,12 @@ $max-md : '768px';
 }
 
 // стилизация печатных элементов
-/deep/ a, a {
+:deep(a, a) {
 
     @apply text-sky-900 underline font-mono font-bold;
 }
 
-/deep/ a:hover, a:hover{
+:deep(a:hover, a:hover){
     @apply text-sky-300;
 }
 
@@ -71,7 +71,7 @@ $max-md : '768px';
         transition: .5s;
 
     }
-    /deep/ .fa-facebook {
+    :deep(.fa-facebook) {
         padding:10px 14px;
 
         &:hover {
@@ -79,7 +79,7 @@ $max-md : '768px';
         }
     }
 
-    /deep/ .fa-twitter {
+    :deep(.fa-twitter) {
         padding:10px 12px;
 
         &:hover {
@@ -87,7 +87,7 @@ $max-md : '768px';
         }
     }
 
-    /deep/ .fa-rss {
+    :deep( .fa-rss) {
         padding:10px 14px;
 
         &:hover {
@@ -95,7 +95,7 @@ $max-md : '768px';
         }
     }
 
-    /deep/ .fa-youtube {
+    :deep(.fa-youtube) {
         padding:10px 14px;
 
         &:hover {
@@ -103,7 +103,7 @@ $max-md : '768px';
         }
     }
 
-    /deep/ .fa-linkedin {
+    :deep(.fa-linkedin) {
         padding:10px 14px;
 
         &:hover {
@@ -111,38 +111,38 @@ $max-md : '768px';
         }
     }
 
-    /deep/ .fa-github {
+    :deep(.fa-github) {
         padding:10px 14px;
 
         &:hover {
             background-color: #5a32a3;
         }
     }
-    /deep/ .fa-phone{
+    :deep(.fa-phone){
         padding:10px 14px;
         &:hover{
             background-color: aquamarine;
         }
     }
-    /deep/ .fa-phone{
+    :deep(.fa-phone){
         padding:10px 14px;
         &:hover{
             background-color: aquamarine;
         }
     }
-    /deep/ .fa-telegram{
+    :deep(.fa-telegram){
         padding:10px 14px;
         &:hover{
             background-color: #3d5b99;
         }
     }
-    /deep/ .fa-viber{
+    :deep(.fa-viber){
         padding:10px 14px;
         &:hover{
             background-color: #5a32a3;
         }
     }
-    /deep/ .fa-envelope{
+    :deep(.fa-envelope){
         padding:10px 14px;
         &:hover{
             background-color: #e64a41;
@@ -224,16 +224,15 @@ $background-color:rgba(12, 74, 110, var(--tw-bg-opacity));; //color of your back
 }
 //Текстовый блок
 
-@layer components {
-    .text-block {
+.text-block {
         @apply hover:bg-sky-700 rounded  shadow-lg hover:shadow-2xl duration-200 delay-75 shadow-lg  duration-200 delay-75 m-10 p-4 bg-sky-800
 
-    }
-    .text-block h2{
-        @apply font-sans text-yellow-300 border-l-4 border-yellow-600
-    }
-
 }
+.text-block h2{
+     @apply font-sans text-yellow-300 border-l-4 border-yellow-600
+}
+
+
 
 .text-block{
     flex-basis: 100%;

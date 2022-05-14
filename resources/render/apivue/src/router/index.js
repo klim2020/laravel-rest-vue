@@ -5,12 +5,12 @@ import CV from '../components/cv/CV'
 
 const routes = [
   {
-    path: '/',
+    path: '/:lang*',
     name: 'Home',
     component: Home
   },
   {
-    path: '/about',
+    path: '/about/:lang*',
     name: 'About',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
@@ -18,14 +18,15 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path:'/data',
+    path:'/data/:lang*',
     name:'SimpleData',
     component: SimpleData
   },
     {
         path:'/cv/:lang*',
         name:'CV',
-        component: CV
+        component: CV,
+
     }
 ]
 

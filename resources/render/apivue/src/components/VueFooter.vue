@@ -1,5 +1,6 @@
 <template>
-<footer id="footer">
+
+<footer id="footer" class="bg-emerald-400">
 <div class="powered">
     <p>powered by <a href="https://vuejs.org">VueJs</a>  & <a href="https://www.laravel.com">Laravel</a> </p>
 </div>
@@ -22,7 +23,8 @@ export default {
      flex-direction:column;
      justify-content:center;
      height:100px;
-     background-color: lightgreen;
+
+
     a {
         font-weight: bold;
         color: #2c3e50;

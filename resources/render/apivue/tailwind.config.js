@@ -6,7 +6,7 @@ module.exports = {
     ]},
   theme: {
     extend: {
-        screens: {
+        /*screens: {
             '2xl': {'max': '1535px'},
             // => @media (max-width: 1535px) { ... }
 
@@ -21,7 +21,7 @@ module.exports = {
 
             'sm': {'max': '639px'},
             // => @media (max-width: 639px) { ... }
-        },
+        },*/
         width: {
             '95/100': '95%',
         },
@@ -56,11 +56,7 @@ module.exports = {
             amber: colors.amber,
             orange: colors.orange,
             red: colors.red,
-            warmGray: colors.warmGray,
-            trueGray: colors.trueGray,
-            gray: colors.gray,
-            blueGray: colors.blueGray,
-            coolGray: colors.coolGray,
+            gray: colors.gray
         }
     },
   },
