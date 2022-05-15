@@ -13,9 +13,10 @@ import fs from 'fs';
 
         // Understand if it's dist or build folder
         const folderName = fs.existsSync("dist") ? "dist" : "build";
+        await execa("cp",  ["src/assets/cname/CNAME",folderName]);
         await execa("git", ["--work-tree", folderName, "add", "--all"]);
         await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);
-        await execa("cp",  ["src/assets/cname/CNAME",folderName]);
+
         console.log("Pushing to gh-pages...");
         await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
         await execa("rm", ["-r", folderName]);
