@@ -10,7 +10,7 @@
                     <router-link class="bg-blue-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-2" :to="{ path: '/cv' }">
                         {{ homedata.portfolio_button_text[0] }}</router-link>
 
-                    <a @click.prevent = "scrollTo('#about')" class="bg-green-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2">
+                    <a @click.prevent = "scrollTo('#about')" class="cursor-pointer bg-green-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2">
                         {{ homedata.next_text[0] }}
                     </a>
                 </div>
