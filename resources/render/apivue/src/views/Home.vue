@@ -1,6 +1,6 @@
 <template>
     <!-- This is an example component -->
-    <div   v-if="homedata" class="w-full h-screen bg-fixed bg-center bg-no-repeat bg-cover" :style="{'background-image': `url(${this.image})`}">
+    <div   v-if="homedata" class="w-full h-screen bg-fixed bg-center bg-no-repeat bg-cover" :style="{'background-image': `url(${this.getImage()})`}">
         <div class="w-full h-screen backdrop-blur backdrop-contrast-50 bg-opacity-50 bg-black flex justify-center items-center">
             <div class="mx-4 backdrop-brightness-125  p-8 text-center text-white">
                 <h1 class=" font-mono font-bold  text-6xl mb-4">{{ homedata.hello_text[0] }}</h1>
@@ -10,7 +10,7 @@
                     <router-link class="bg-blue-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-blue-600 mr-2" :to="{ path: '/cv' }">
                         {{ homedata.portfolio_button_text[0] }}</router-link>
 
-                    <a href="" class="bg-green-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2">
+                    <a @click.prevent = "scrollTo('#about')" class="bg-green-500 rounded-md font-bold text-white text-center px-4 py-3 transition duration-300 ease-in-out hover:bg-red-600 ml-2">
                         {{ homedata.next_text[0] }}
                     </a>
                 </div>
@@ -50,6 +50,12 @@
             </div>
         </div>
     </div>
+
+    <div   v-if="homedata" class="w-full h-32 bg-fixed bg-center bg-no-repeat bg-cover" :style="{'background-image': `url(${this.getImage()})`}">
+        <div class="w-full h-32 backdrop-blur backdrop-contrast-50 bg-opacity-50 bg-black flex justify-center items-center">
+
+        </div>
+    </div>
 </template>
 
 <script>
@@ -67,6 +73,12 @@ import languageProvider from "@/libs/languageProvider";
 export default {
   name: 'Home',
   methods: {
+      scrollTo(id){
+           document.querySelector(id).scrollIntoView({behavior: 'smooth'});
+      },
+      getImage(){
+          return './img/'+this.getRand();
+      },
      // геттер вычисляемого значения
      getRand: function () {
          // `this` указывает на экземпляр vm
