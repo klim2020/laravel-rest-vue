@@ -6,6 +6,9 @@ import fs from 'fs';
 
 (async () => {
     try {
+        await execa("git", ["checkout", "-f", "master"]);
+        await execa("git", ["branch", "-D", "gh-pages"]);
+
         await execa("git", ["checkout", "--orphan", "gh-pages"]);
         // eslint-disable-next-line no-console
         console.log("Building started...");
