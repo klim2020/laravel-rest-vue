@@ -9,6 +9,8 @@
     "deploy": "node scripts/gh-pages-deploy.mjs"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.1.1",
+    "@fortawesome/free-solid-svg-icons": "^6.1.1",
     "@heroicons/vue": "^1.0.6",
     "@ocrv/vue-tailwind-pagination": "0.0.4",
     "@tailwindcss/postcss7-compat": "^2.2.17",
@@ -26,6 +28,7 @@
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
+    "@fortawesome/fontawesome-free": "^6.1.1",
     "@vue/cli-plugin-babel": "^5.0.4",
     "@vue/cli-plugin-eslint": "^5.0.4",
     "@vue/cli-plugin-router": "^5.0.4",

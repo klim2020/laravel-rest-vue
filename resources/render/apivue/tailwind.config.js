@@ -1,9 +1,11 @@
 const colors = require('tailwindcss/colors');
 module.exports = {
+
     purge: {content: [
         "./index.php",
         "./src/**/*.{vue,js,ts,jsx,tsx,tpl}",
     ]},
+
   theme: {
     extend: {
         /*screens: {
@@ -26,6 +28,8 @@ module.exports = {
             '95/100': '95%',
         },
         colors: {
+
+            primary: "#10b981",
             "sky": {
                 "50":"#f0f9ff",
                 "100":"#e0f2fe",
