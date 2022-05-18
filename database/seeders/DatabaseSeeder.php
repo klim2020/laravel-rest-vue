@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
         //$this->call(SimpleDataSeeder::class);
         // \App\Models\User::factory(10)->create();
         $this->call(CvDataSeeder::class);
+        $this->call(HomeSeeder::class);
+       // $this->call(HomeSeeder::class);
     }
 }

@@ -38,6 +38,10 @@ export default {
         return await ret;
     },
 
+    sendContactRequest(form){
+        return form;
+    },
+
 
 
 }

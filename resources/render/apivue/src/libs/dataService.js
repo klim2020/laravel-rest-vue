@@ -22,10 +22,12 @@ export default {
       return this.pages[this.currentPage].fn(languageProvider.getLanguageCode());
     },
     getContacts(){
-
        return dataProvider.getContacts(languageProvider.getLanguageCode());
+    },
+
+
+    sendContactRequest(form) {
+        return dataProvider.sendContactRequest(form);
+
     }
-
-
-
 }

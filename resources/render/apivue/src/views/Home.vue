@@ -18,24 +18,22 @@
             </div>
         </div>
     </div>
+
     <!--hello world-->
     <div>
         <div class="bg-emerald-50 font-mono p-4" id="about">
             <div class="border-4 rounded p-4 container flex  justify-center py-16 md:py-20 lg:flex-row">
                 <div class="w-full text-center w-4/5  text-center lg:text-left">
                     <h2 class="font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl">
-                        Who am I?
+                       {{ homedata.about_who_i_am[0] }}
                     </h2>
                     <img src="img/fullstack.jpg" class="border-2 rounded" style="width: 300px;padding: 10px;float: left;border:1px solid gray;">
                     <h4 class=" pl-4 overflow-hidden pt-6 font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl">
-                        My name is Klym.
+                        {{ homedata.about_my_name[0] }}
                     </h4>
 
                     <p class=" pl-4 overflow-hidden pt-6 font-body leading-relaxed text-grey-20">
-                        They say that if I make my own blog using Laravel + Vue, then it would be much easier to find a job with this stack.
-                        For 3 years I was working as a  PHP developer on a small projects(e-commerce mostly) powered by Opencart and Wordpress CMS  mostly.
-                        And now I get bored with this CMS, so am looking forward for a new opportunities, I need to grow and discover new horizonts.
-                        So I started my own blog, using Laravel + Vue stack. So welcome aboard, hope it will be interesting for you :)
+                       {{ homedata.about_short_text[0] }}
                     </p>
                     <div v-if="contacts" class="flex pl-4 overflow-hidden flex-col justify-center pt-6 sm:flex-row lg:justify-start">
                         <div  class="flex items-center justify-center sm:justify-start">
@@ -50,6 +48,7 @@
             </div>
         </div>
     </div>
+
     <!-- Parralax -->
     <div class="w-full h-32 bg-fixed bg-center bg-no-repeat bg-cover" :style="{'background-image': `url(${this.getImage()})`}">
         <div class="w-full h-32 backdrop-blur backdrop-contrast-50 bg-opacity-50 bg-black flex justify-center items-center">
@@ -62,29 +61,29 @@
         <h2
             class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
         >
-            Short skill brief
+            {{ homedata.services_desc[0] }}
         </h2>
         <h3
             class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
         >
-            What can I do...
+            {{ homedata.services_what_i_can[0] }}
         </h3>
 
         <div
             class="grid grid-cols-1 gap-6 pt-10 sm:grid-cols-2 md:gap-10 md:pt-12 lg:grid-cols-3"
         >
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
+            <div v-for="(item, index) in homedata.services_what_i_can[0]" :key="index" class="group rounded px-8 py-12 shadow hover:bg-primary">
                 <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
                     <div class="hidden group-hover:block">
                         <img
-                            src="/img/icon-development-white.svg"
-                            alt="development icon"
+                            :src="item.img"
+                            :alt="item.img_alt"
                         />
                     </div>
                     <div class="block group-hover:hidden">
                         <img
-                            src="/img/icon-development-black.svg"
-                            alt="development icon"
+                            :src="item.img_hover"
+                            :alt="item.img_alt"
                         />
                     </div>
                 </div>
@@ -92,65 +91,14 @@
                     <h3
                         class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow-300 lg:text-xl"
                     >
-                        BACK_END
+                        {{ item.title }}
                     </h3>
                     <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Web development including different PHP CMS Such as Wordpress, Opencart, Laravel.
+                        {{ item.desc }}
                     </p>
                 </div>
             </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                            src="/img/deploy-white.svg"
-                            alt="content marketing icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                            src="/img/deploy-black.svg"
-                            alt="content marketing icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                        class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow-300 lg:text-xl"
-                    >
-                        SERVER_DEPLOYMENT
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Server deployment including Apache/NGINX hosting, Heroku, Amazon AWS.
-                    </p>
-                </div>
-            </div>
-            <div class="group rounded px-8 py-12 shadow hover:bg-primary">
-                <div class="mx-auto h-24 w-24 text-center xl:h-28 xl:w-28">
-                    <div class="hidden group-hover:block">
-                        <img
-                            src="/img/icon-graphics-white.svg"
-                            alt="Graphic Design icon"
-                        />
-                    </div>
-                    <div class="block group-hover:hidden">
-                        <img
-                            src="/img/icon-graphics-black.svg"
-                            alt="Graphic Design icon"
-                        />
-                    </div>
-                </div>
-                <div class="text-center">
-                    <h3
-                        class="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow-300 lg:text-xl"
-                    >
-                        WEB_DESIGN
-                    </h3>
-                    <p class="text-grey pt-4 text-sm group-hover:text-white md:text-base">
-                        Web Development including HTML/CSS/Javascript Stack, VueJS, Angular, AlpineJS
-                    </p>
-                </div>
-            </div>
+
         </div>
     </div>
 
@@ -166,37 +114,29 @@
         <h2
             class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
         >
-            Check out my Portfolio
+            {{ homedata.my_works_title[0] }}
         </h2>
         <h3
             class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
         >
-            Here's what I have done with the past
+            {{ homedata.my_works_short_desc[0] }}
         </h3>
 
         <div
             class="mx-auto grid w-full grid-cols-1 gap-8 pt-12 sm:w-3/4 md:gap-10 lg:w-full lg:grid-cols-2"
         >
-            <a
-                href="/"
-                class="mx-auto transform transition-all hover:scale-105 md:mx-0"
+            <a v-for="(item, index) in homedata.my_works[0]" :key="index"
+                 :href="item.href"
+                 class="mx-auto transform transition-all hover:scale-105 md:mx-0"
             >
-                <img
-                    src="/img/bulbul.png"
-                    class="shadow"
-                    alt="portfolio image"
-                />
+               <img
+                  :src="item.img"
+                  class="shadow"
+                  :alt="item.img_alt"
+               />
             </a>
-            <a
-                href="/"
-                class="mx-auto transform transition-all hover:scale-105 md:mx-0"
-            >
-                <img
-                    src="/img/airboats.png"
-                    class=" shadow"
-                    alt="portfolio image"
-                />
-            </a>
+
+
         </div>
     </div>
 
@@ -221,35 +161,42 @@
         </h4>
         <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
             <p class="font-body text-grey-10">
-                Please leave message and I will contact you ASAP:)
+                Please leave me a message and I will contact you ASAP:)
             </p>
         </div>
-        <form class="mx-auto w-full pt-10 sm:w-3/4">
+        <form @submit="checkForm()" class="mx-auto w-full pt-10 sm:w-3/4" id="submitform">
             <div class="flex flex-col md:flex-row">
                 <input
-                    class="mr-3 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
-                    placeholder="Name"
+                    class="mr-3 w-full rounded border-2 border-grey-50 px-4 py-3 font-body text-black md:w-1/2 lg:mr-5"
+                    placeholder="homedata.cf_input_name[0]"
                     type="text"
-                    id="name"
+                    id="form-name"
                 />
                 <input
                     class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
-                    placeholder="Email"
+                    placeholder="homedata.cf_input_email[0]"
                     type="text"
-                    id="email"
+                    id="form-email"
+                />
+                <input
+                    class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-0 md:ml-3 md:w-1/2 lg:ml-5"
+                    placeholder="homedata.cf_input_phone[0]"
+                    type="text"
+                    id="form-phone"
                 />
             </div>
+
             <textarea
                 class="mt-6 w-full rounded border-grey-50 px-4 py-3 font-body text-black md:mt-8"
-                placeholder="Message"
-                id="message"
+                placeholder="homedata.cf_input_message[0]"
+                id="form-message"
                 cols="30"
                 rows="10"
             ></textarea>
-            <button
+            <button type="submit" @click.prevent = "sendContactData()"
                 class="mt-6 flex items-center justify-center rounded bg-primary px-8 py-3 font-header text-lg font-bold uppercase text-white hover:bg-grey-20"
             >
-                Send
+                {{  homedata.cf_input_text_send[0]  }}
                 <i class="bx bx-chevron-right relative -right-2 text-3xl"></i>
             </button>
         </form>
@@ -260,11 +207,11 @@
                 <div class="flex items-center">
                     <i class="bx bx-phone text-2xl text-grey-40"></i>
                     <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
-                        My Phone
+                        {{ homedata.cf_input_phone[0] }}
                     </p>
                 </div>
                 <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-                    <a href = "tel:+380977813910">+38(097) 781 39 10</a>
+                    <a href = "contacts.contacts[0][0]['href']">{{ contacts.contacts[0][0]["name"] }}</a>
                 </p>
             </div>
             <div
@@ -273,11 +220,11 @@
                 <div class="flex items-center">
                     <i class="bx bx-envelope text-2xl text-grey-40"></i>
                     <p class="pl-2 font-body font-bold uppercase text-grey-40 lg:text-lg">
-                        My Email
+                        {{ homedata.cf_input_email[0] }}
                     </p>
                 </div>
                 <p class="pt-2 text-left font-body font-bold text-primary lg:text-lg">
-                    <a href = "mailto:klimworkss@gmail.com">klimworkss@gmail.com</a>
+                    <a href = "contacts.contacts[0][1]['href']">{{ contacts.contacts[0][1]["name"] }}</a>
                 </p>
             </div>
 
@@ -296,12 +243,54 @@
 
 
 import dataService from "@/libs/dataService";
+import errorService from "@/libs/errorService";
 
+import { useToast, POSITION, TYPE } from "vue-toastification";
 
+import validator from 'validator';
 
 export default {
   name: 'Home',
   methods: {
+      checkForm(){
+
+      },
+
+      sendContactData(){
+
+        let errors = [];
+        let form ={
+             name :document.querySelector("#form-name").value,
+             phone : document.querySelector("#form-phone").value,
+             email : document.querySelector("#form-email").value,
+             msg : document.querySelector("#form-message").value,
+        };
+        if (!validator.isEmail(form.email)){errors.push("Please enter a valid email")};
+        if (!validator.isMobilePhone(form.phone)){errors.push("Please enter a valid phone")};
+        if (!validator.isLength(form.msg,{min:20, max: undefined})){errors.push("Please provide a Message")};
+        if (!validator.isAlpha(form.name)){errors.push("Please provide a valid name")};
+        const toast = useToast();
+        if(errors.length>0){
+            toast("Error: " + errors.join('|| '), {
+                position: POSITION.TOP_CENTER,
+                type:TYPE.ERROR,
+
+                toastClassName: "top-16",
+                timeout: 10000});
+        }else{
+            toast("Everything is ok please wait while we send your request to a server: ", {
+                position: POSITION.TOP_CENTER,
+                type:TYPE.SUCCESS,
+
+                toastClassName: "top-16",
+                timeout: 10000});
+        }
+        dataService.sendContactRequest(form)
+
+
+
+
+      },
       scrollTo(id){
            document.querySelector(id).scrollIntoView({behavior: 'smooth'});
       },
@@ -322,6 +311,7 @@ export default {
   },
   data(){
     return{
+        errorservice:errorService,
         image:'./paralax1.jpg',
         homedata:false,
         contacts:false,
@@ -344,3 +334,10 @@ export default {
 
 }
 </script>
+<style>
+
+.my-container-class
+{
+    top: 10em;
+}
+</style>

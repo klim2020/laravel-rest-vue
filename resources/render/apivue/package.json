@@ -21,9 +21,12 @@
     "execa": "^6.1.0",
     "postcss-loader": "^6.2.1",
     "tailwind": "^4.0.0",
+    "validator": "^13.7.0",
     "vue": "^3.0.0",
     "vue-html2pdf": "^1.8.0",
-    "vue-router": "^4.0.0-0"
+    "vue-router": "^4.0.0-0",
+    "vue-toast-notification": "^3.0.2",
+    "vue-toastification": "^2.0.0-rc.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

@@ -21,9 +21,12 @@ class SimpleDataSeeder extends Seeder
 
         SimpleData::factory(10)->make()->each(function ($simple_data) {
 
-            $author = Author::factory()->create();
-            $simple_data->authors()->associate($author);
-            $simple_data->save();
+            $contact = ContactRequest::create([
+                'name' => 'sdfds',
+                'phone' => 'test++',
+                'email' => 'test@test',
+                'text' => 'text',
+            ]);
 
         });
 

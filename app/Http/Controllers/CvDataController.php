@@ -107,6 +107,6 @@ class CvDataController extends Controller
      */
     public function destroy(CvData $cvData)
     {
-        //
+
     }
 }
