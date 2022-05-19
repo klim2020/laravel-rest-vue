@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function index($lang = null)
     {
         if (!isset($lang)){
-            $lang='en';
+            $lang='ru';
         }
         $qq = HomeResourcs::collection(Home::where('lang', $lang)->get());
 

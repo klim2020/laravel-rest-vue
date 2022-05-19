@@ -15,25 +15,22 @@ export default {
         return await fetch(this.url+'/simpldata/').then((ret)=>{return ret.json();});
     },
     getContacts: async function(lang = 'ru'){
-        console.log(this.url + '/getcontacts/' + lang);
+        //console.log(this.url + '/getcontacts/' + lang);
         let ret = await (await fetch(this.url + '/getcontacts/' + lang)).json();
         return await ret;
     },
 
 
     getHomeData: async function(lang = 'ru'){
-        if (lang === 'ffs' ) {return lang;}
-        let ret = {hello_text:['Hello Everyone'],
-                    who_text:['I\'am Klim'],
-                    short_desc_text:['And this is my programmers blog'],
-                    portfolio_button_text:['Check portfolio'],
-                    next_text:['Go next']
-        }
-        return ret;
+       // console.log(this.url + '/home/' + lang);
+
+        let ret = await (await fetch(this.url + '/home/' + lang)).json();
+        return await ret;
+
     },
 
     getCVData: async function(lang = 'ru'){
-
+       // console.log(this.url + '/cv/' + lang);
         let ret = await (await fetch(this.url + '/cv/' + lang)).json();
         return await ret;
     },

@@ -28,6 +28,7 @@ export default {
             // Код, который будет запущен только после
             // отрисовки всех представлений
         dataService.switchPage('cv');
+        //console.log("cv");
         //this.loadLanguage();
 
         this.getData();

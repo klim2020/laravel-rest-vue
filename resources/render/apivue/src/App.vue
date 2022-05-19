@@ -34,7 +34,7 @@ export default {
     components: {VueHeader , VueFooter},
     data(){
         return{
-            msg:"hello wor;ls"
+
         }
     },
 

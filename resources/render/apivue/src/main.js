@@ -3,7 +3,6 @@ import App from './App.vue'
 import router from './router'
 
 
-import errorService from "@/libs/errorService";
 
 
 import '../index.css'
@@ -34,4 +33,4 @@ app.mount('#app');
 
 
 
-errorService.toast = app.$toast;
+
