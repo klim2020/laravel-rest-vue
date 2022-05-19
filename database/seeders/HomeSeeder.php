@@ -116,6 +116,112 @@ class HomeSeeder extends Seeder
         "cf_input_text_send"=>"Отправить",
     ];
 
+    private $items_ua=[
+        "hello_text"=>"Вiтаю",
+        "who_text"=>"Мене звати Клим",
+        "short_desc_text"=>"И це мiй невиличкий блог",
+        "portfolio_button_text"=>"Портфолiо",
+        "next_text"=>"Далi",
+
+        "about_short_text"=>"Я працюю PHP розробником вже 3 роки, в основному це системи на CMS: Opencart, Wordpress, Joomla та iн.
+                        А тому я вирiшив спробувати шось новеньке, наприклад написати блог  на Laravel, це дуже прогресивний фреймворк, до того ж вiн дуже добре интегруеться з VueJS.
+                        Для програмiста дуже важливо не стояти на одному мiсцi i завжди розширювати свої горизонти.
+                        А тому хочу привiтати вас у себе на сторінці  :)",
+        "about_my_name"=>"Мене звати Клим.",
+        "about_who_i_am"=>"О собі",
+        "services_desc"=>"Що я вмiю",
+        "services_what_i_can_text"=>"",
+        "services_what_i_can"=>[
+            [
+                "title"=>"BACK_END","desc"=>"Web розробка сайтiв для ризних CMS, таких как Wordpress, Opencart, Laravel, Symfony. Створення різноманітних модулів",
+                "img"=>"/img/icon-development-white.svg","img_hover"=>"/img/icon-development-black.svg","img_alt"=>"Back end development"
+            ],
+            [
+                "title"=>"SERVER_DEPLOYMENT","desc"=>"Встановлення сайтів  на різні хостинги: Apache/NGINX, Heroku, Amazon AWS.",
+                "img"=>"/img/deploy-white.svg","img_hover"=>"/img/deploy-black.svg","img_alt"=>"Server Deployment"
+            ],
+            [
+                "title"=>"FRONT_END","desc"=>"Web разработка різноманітних графiчних iнтерфейсiв на стеке HTML/CSS/Javascript, VueJS, Angular, AlpineJS",
+                "img"=>"/img/icon-graphics-white.svg","img_hover"=>"/img/icon-graphics-black.svg","img_alt"=>"Front End Development"
+            ],
+        ],
+        "my_works_title"=>"Портфолiо",
+        "my_works_short_desc"=>"Нижче приведені мої роботи",
+        "my_works"=>[
+            ["href"=>"bulbul.ua","img"=>"/img/bulbul.png","img_alt"=>"невеличкий інтернет  магазин на opencart"],
+            ["href"=>"airboats.ru","img"=>"/img/airboats.png","img_alt"=>"еще один небольшой интрнет магазин opencart"],
+        ],
+        "cf_title"=>"Форма для зв'язку",
+        "cf_desc"=>"<h4
+                        class=\"pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl\"
+                    >
+                        Якшо э питання
+                    </h4>
+                    <div class=\"mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6\">
+                        <p class=\"font-body text-grey-10\">
+                            Будь ласка залиште їх тут, і я обов'язково зв'яжусь з вами
+                        </p>
+                    </div>",
+        "cf_input_name"=>"Им'я",
+        "cf_input_email"=>"Почта",
+        "cf_input_phone"=>"Телефон",
+        "cf_input_msg"=>"повідомлення",
+        "cf_input_text_send"=>"Вiдправити",
+    ];
+
+    private $items_pl=[
+        "hello_text"=>"Witam",
+        "who_text"=>"Nazywam się Klim",
+        "short_desc_text"=>"Witam na moim małym blogu",
+        "portfolio_button_text"=>"Portfolio",
+        "next_text"=>"Dalej",
+
+        "about_short_text"=>"Здравствуйте, я работаю курьером, а по вечерам пишу свой блог и  это не дефолтный текст для сайта Wordpress :).
+                        Потому что я три  года  работаю с CMS Opencart/Wordpress и хочу попробовать что то новенькое.
+                        Поэтому, чтобы расширить свои навыки программирования я решил написать небольшой блог на связке Laravel+Vue.
+                        Поэтому добро пожаловать на мою страницу :)",
+        "about_my_name"=>"Меня зовут Клим.",
+        "about_who_i_am"=>"О себе",
+        "services_desc"=>"Мои навыки",
+        "services_what_i_can_text"=>"Что я умею",
+        "services_what_i_can"=>[
+            [
+                "title"=>"BACK_END","desc"=>"Web разработка сайтов на разных CMS, таких как Wordpress, Opencart, Laravel, Symfony.",
+                "img"=>"/img/icon-development-white.svg","img_hover"=>"/img/icon-development-black.svg","img_alt"=>"Back end development"
+            ],
+            [
+                "title"=>"SERVER_DEPLOYMENT","desc"=>"Услуга устновки на различные хостинги: Apache/NGINX, Heroku, Amazon AWS.",
+                "img"=>"/img/deploy-white.svg","img_hover"=>"/img/deploy-black.svg","img_alt"=>"Server Deployment"
+            ],
+            [
+                "title"=>"FRONT_END","desc"=>"Web разработка графических интерфейсов на стеке HTML/CSS/Javascript, VueJS, Angular, AlpineJS",
+                "img"=>"/img/icon-graphics-white.svg","img_hover"=>"/img/icon-graphics-black.svg","img_alt"=>"Front End Development"
+            ],
+        ],
+        "my_works_title"=>"Мои работы",
+        "my_works_short_desc"=>"Ниже представлены мои работы",
+        "my_works"=>[
+            ["href"=>"bulbul.ua","img"=>"/img/bulbul.png","img_alt"=>"небольшой интрнет магазин opencart"],
+            ["href"=>"airboats.ru","img"=>"/img/airboats.png","img_alt"=>"еще один небольшой интрнет магазин opencart"],
+        ],
+        "cf_title"=>"Форма для связи",
+        "cf_desc"=>"<h4
+                        class=\"pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl\"
+                    >
+                        У вас возникли вопросы?
+                    </h4>
+                    <div class=\"mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6\">
+                        <p class=\"font-body text-grey-10\">
+                            Пожалуйста оставьте их сдесь и я свяжусь с вами в скором времени.
+                        </p>
+                    </div>",
+        "cf_input_name"=>"Имя",
+        "cf_input_email"=>"Почта",
+        "cf_input_phone"=>"Телефон",
+        "cf_input_msg"=>"Сообщение",
+        "cf_input_text_send"=>"Отправить",
+    ];
+
 
     /**
      * Run the database seeds.
@@ -129,8 +235,8 @@ class HomeSeeder extends Seeder
         $items = array(
             "ru"=>$this->items_ru,
             "en"=>$this->items_en,
-            //"pl"=>$this->items_pl,
-            //"ua"=>$this->items_ua
+            "pl"=>$this->items_pl,
+            "ua"=>$this->items_ua
         );
         foreach($items as $lang=>$value){
             foreach ($value as $key=>$item){
