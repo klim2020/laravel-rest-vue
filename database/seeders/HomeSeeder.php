@@ -123,7 +123,7 @@ class HomeSeeder extends Seeder
         "portfolio_button_text"=>"Портфолiо",
         "next_text"=>"Далi",
 
-        "about_short_text"=>"Я працюю PHP розробником вже 3 роки, в основному це системи на CMS: Opencart, Wordpress, Joomla та iн.
+        "about_short_text"=>"Я працюю PHP розробником вже 3 роки, В основному с CMS на PHP такими як  Opencart, Wordpress, Joomla.
                         А тому я вирiшив спробувати шось новеньке, наприклад написати блог  на Laravel, це дуже прогресивний фреймворк, до того ж вiн дуже добре интегруеться з VueJS.
                         Для програмiста дуже важливо не стояти на одному мiсцi i завжди розширювати свої горизонти.
                         А тому хочу привiтати вас у себе на сторінці  :)",
@@ -172,54 +172,54 @@ class HomeSeeder extends Seeder
     private $items_pl=[
         "hello_text"=>"Witam",
         "who_text"=>"Nazywam się Klim",
-        "short_desc_text"=>"Witam na moim małym blogu",
+        "short_desc_text"=>"Witam na moim blogu",
         "portfolio_button_text"=>"Portfolio",
         "next_text"=>"Dalej",
 
-        "about_short_text"=>"Здравствуйте, я работаю курьером, а по вечерам пишу свой блог и  это не дефолтный текст для сайта Wordpress :).
-                        Потому что я три  года  работаю с CMS Opencart/Wordpress и хочу попробовать что то новенькое.
-                        Поэтому, чтобы расширить свои навыки программирования я решил написать небольшой блог на связке Laravel+Vue.
-                        Поэтому добро пожаловать на мою страницу :)",
-        "about_my_name"=>"Меня зовут Клим.",
-        "about_who_i_am"=>"О себе",
-        "services_desc"=>"Мои навыки",
-        "services_what_i_can_text"=>"Что я умею",
+        "about_short_text"=>"Od 3 lat pracuję jako programista PHP, Pracuję głównie z CMS w języku PHP takim jak Opencart, Wordpress, Joomla.
+                        Teraz chcę poszerzyć swoje horyzonty, i dlatego wybierz ścieżkę dalszego rozwoju. Mój wzrok padł na laravel. To jest bardzo dobry framework napisany w jezyku php.
+                        Dlatego postanowiłem pisać bloga za pomocą laravel+vuejs.
+                        Więc witaj na mojej stronie internetowej",
+        "about_my_name"=>"Nazywam się Klim.",
+        "about_who_i_am"=>"O sobie",
+        "services_desc"=>"Moje umiejętności",
+        "services_what_i_can_text"=>"",
         "services_what_i_can"=>[
             [
-                "title"=>"BACK_END","desc"=>"Web разработка сайтов на разных CMS, таких как Wordpress, Opencart, Laravel, Symfony.",
+                "title"=>"BACK_END","desc"=>"Tworzenie stron internetowych na różnych systemach CMS: Wordpress, Opencart, Laravel, Symfony.",
                 "img"=>"/img/icon-development-white.svg","img_hover"=>"/img/icon-development-black.svg","img_alt"=>"Back end development"
             ],
             [
-                "title"=>"SERVER_DEPLOYMENT","desc"=>"Услуга устновки на различные хостинги: Apache/NGINX, Heroku, Amazon AWS.",
+                "title"=>"SERVER_DEPLOYMENT","desc"=>"instalacja CMS system na różni hostingi:  Apache/NGINX, Heroku, Amazon AWS.",
                 "img"=>"/img/deploy-white.svg","img_hover"=>"/img/deploy-black.svg","img_alt"=>"Server Deployment"
             ],
             [
-                "title"=>"FRONT_END","desc"=>"Web разработка графических интерфейсов на стеке HTML/CSS/Javascript, VueJS, Angular, AlpineJS",
+                "title"=>"FRONT_END","desc"=>"Tworzenie graficznych interfejsów przez HTML/CSS/Javascript, VueJS, Angular, AlpineJS",
                 "img"=>"/img/icon-graphics-white.svg","img_hover"=>"/img/icon-graphics-black.svg","img_alt"=>"Front End Development"
             ],
         ],
-        "my_works_title"=>"Мои работы",
-        "my_works_short_desc"=>"Ниже представлены мои работы",
+        "my_works_title"=>"Portfolio",
+        "my_works_short_desc"=>"Poniżej sa moje prace",
         "my_works"=>[
-            ["href"=>"bulbul.ua","img"=>"/img/bulbul.png","img_alt"=>"небольшой интрнет магазин opencart"],
-            ["href"=>"airboats.ru","img"=>"/img/airboats.png","img_alt"=>"еще один небольшой интрнет магазин opencart"],
+            ["href"=>"bulbul.ua","img"=>"/img/bulbul.png","img_alt"=>"mały sklep internetowy stworzony przy pomocy cms opencart"],
+            ["href"=>"airboats.ru","img"=>"/img/airboats.png","img_alt"=>"mały sklep internetowy stworzony przy pomocy cms opencart"],
         ],
-        "cf_title"=>"Форма для связи",
+        "cf_title"=>"Formularz  dla komunikacji",
         "cf_desc"=>"<h4
                         class=\"pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl\"
                     >
-                        У вас возникли вопросы?
+                       Czy masz jakieś pytania?
                     </h4>
                     <div class=\"mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6\">
                         <p class=\"font-body text-grey-10\">
-                            Пожалуйста оставьте их сдесь и я свяжусь с вами в скором времени.
+                            Zostaw je tutaj, a wkrótce się z Tobą skontaktuję.
                         </p>
                     </div>",
-        "cf_input_name"=>"Имя",
-        "cf_input_email"=>"Почта",
-        "cf_input_phone"=>"Телефон",
-        "cf_input_msg"=>"Сообщение",
-        "cf_input_text_send"=>"Отправить",
+        "cf_input_name"=>"Imie",
+        "cf_input_email"=>"Poczta",
+        "cf_input_phone"=>"Telefon",
+        "cf_input_msg"=>"Wiadomość",
+        "cf_input_text_send"=>"Wysłać",
     ];
 
 
