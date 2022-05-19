@@ -153,17 +153,10 @@
             <h2
                 class="text-center font-header text-4xl font-semibold uppercase text-primary sm:text-5xl lg:text-6xl"
             >
-                Here's a contact form
+                {{ homedata.cf_title[0] }}
             </h2>
-            <h4
-                class="pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl"
-            >
-                Have Any Questions?
-            </h4>
-            <div class="mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6">
-                <p class="font-body text-grey-10">
-                    Please leave me a message and I will contact you ASAP:)
-                </p>
+            <div v-html = "homedata.cf_desc[0]">
+
             </div>
             <form @submit="checkForm()" class="mx-auto w-full pt-10 sm:w-3/4" id="submitform">
                 <div class="flex flex-col md:flex-row">
