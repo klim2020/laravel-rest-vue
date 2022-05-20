@@ -9,21 +9,24 @@ import html2pdf from 'html2pdf.js';
 import { BeakerIcon } from '@heroicons/vue/solid';
 import  ProgressBar  from '@/components/ProgressBar'
 import dataService from "@/libs/dataService";
+import TheSpinner from "@/components/TheSpinner";
 
 export default {
+
     props:{
       cvdata:Object,
     },
     data(){
 
         return{
+            showed:true,
             cvdata2 : false,//массив с данными
         }
 
     },
 
     name: "CV",
-    components:{ BeakerIcon,ProgressBar },
+    components:{ TheSpinner,BeakerIcon,ProgressBar },
     mounted() {
             // Код, который будет запущен только после
             // отрисовки всех представлений
@@ -37,7 +40,16 @@ export default {
     watch:{
         $route (){
             this.getData();
+        },
+        cvdata2(){
+            if (this.homedata != false ) {
+                this.showed = false
+            }else{
+                this.showed = true
+            }
+
         }
+
     },
     methods: {
         getData: async function(){
@@ -63,7 +75,8 @@ export default {
             })
         }
 
-    }
+    },
+
 }
 </script>
 

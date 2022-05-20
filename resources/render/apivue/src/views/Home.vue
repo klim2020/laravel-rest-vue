@@ -1,4 +1,5 @@
 <template>
+    <TheSpinner v-if="showed"></TheSpinner>
     <div v-if="homedata">
         <!-- This is an example component -->
         <div  class="w-full h-screen bg-fixed bg-center bg-no-repeat bg-cover" :style="{'background-image': `url(${this.getImage()})`}">
@@ -242,12 +243,14 @@ import errorService from "@/libs/errorService";
 import { useToast, POSITION, TYPE } from "vue-toastification";
 
 import validator from 'validator';
+import TheSpinner from "@/components/TheSpinner";
 
 
 
 export default {
   name: 'Home',
-  methods: {
+    components: {TheSpinner},
+    methods: {
 
       checkForm(){
 
@@ -310,6 +313,7 @@ export default {
   },
   data(){
     return{
+        showed:true,
         errorservice:errorService,
         image:'./paralax1.jpg',
         homedata:false,
@@ -329,6 +333,11 @@ export default {
       $route(){
           this.getContacts();
           this.getData();
+      },
+      homedata(){
+        if (this.homedata != false ) {
+            this.showed = false
+        }
       }
   }
 

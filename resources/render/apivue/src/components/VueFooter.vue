@@ -7,12 +7,15 @@
 <div class="copyright">
     <p>Copyright © by Klim Mansurov 2022</p>
 </div>
+
 </footer>
 </template>
 
 <script>
+
 export default {
-    name: "VueFooter"
+    name: "VueFooter",
+
 }
 </script>
 

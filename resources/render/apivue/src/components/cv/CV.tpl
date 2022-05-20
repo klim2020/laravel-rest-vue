@@ -1,3 +1,4 @@
+<TheSpinner v-if="showed"></TheSpinner>
 <div v-if="cvdata2" class="flex flex-row flex-wrap justify-center bg-green-100" ref="document">
 
     <div ref="document" id="topheader" class="z-0 relative bg-sky-900 flex flex-wrap flex-basis border-b-4 border-yellow-600">
