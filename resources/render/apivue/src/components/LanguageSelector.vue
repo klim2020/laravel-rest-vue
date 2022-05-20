@@ -88,7 +88,7 @@
                                 "
                             href="#">
 
-                            {{ item.flag }} {{ item.name }}
+                            <span :class="item.class"></span> {{ item.name }}
                         </a>
                     </li>
 
@@ -101,10 +101,13 @@
 </template>
 
 <script>
-
+import 'flag-icons/css/flag-icons.min.css';
 
 
 export default {
+
+
+
     props:{
 
     },
@@ -116,10 +119,10 @@ export default {
     data(){
       return {
           lang:[
-              {name:"Язык",code:"ru",flag:"🇷🇺"},
-              {name:"Мова",code:"ua",flag:"🇺🇦"},
-              {name:"Language",code:"en",flag:"🇺🇸"},
-              {name:"Język",code:"pl",flag:"🇵🇱"},
+              {name:"Язык",code:"ru",flag:"🇷🇺",class:"fi fi-ru"},
+              {name:"Мова",code:"ua",flag:"🇺🇦",class:"fi fi-ua"},
+              {name:"Language",code:"en",flag:"🇺🇸",class:"fi fi-gb"},
+              {name:"Język",code:"pl",flag:"🇵🇱",class:"fi fi-pl"},
           ],
         expand : false,
 
@@ -141,7 +144,7 @@ export default {
             }
         },
         selectLanguage(lang){
-            document.querySelector("#dropdownMenuButton1 span").innerHTML = lang.flag+" "+ lang.name;
+            document.querySelector("#dropdownMenuButton1 span").innerHTML = `<span class="${lang.class}"></span> ${lang.name}`;
             this.expand = false;
             this.$emit('languageChange',lang);
 

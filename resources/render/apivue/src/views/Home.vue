@@ -243,6 +243,8 @@ import { useToast, POSITION, TYPE } from "vue-toastification";
 
 import validator from 'validator';
 
+
+
 export default {
   name: 'Home',
   methods: {
