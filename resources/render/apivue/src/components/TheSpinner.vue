@@ -1,5 +1,5 @@
 <template>
-    <div class = "wrapper">
+    <div class = "flex items-center justify-center wrapper" >
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
 </template>
