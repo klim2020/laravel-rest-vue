@@ -1,5 +1,5 @@
 <template>
-    <TheSpinner v-if="showed"></TheSpinner>
+    <TheSpinner class = "flex items-center justify-center" v-if="showed"></TheSpinner>
     <div v-if="homedata">
         <!-- This is an example component -->
         <div  class="w-full h-screen bg-fixed bg-center bg-no-repeat bg-cover" :style="{'background-image': `url(${this.getImage()})`}">
