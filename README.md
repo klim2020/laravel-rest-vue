@@ -1,4 +1,4 @@
-#Small Laravel+Vuejs Starter kit
+# Small Laravel+Vuejs Starter kit
 
 Client - Server with API 
 
