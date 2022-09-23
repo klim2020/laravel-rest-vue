@@ -3,6 +3,7 @@
 use App\Http\Controllers\ContactRequestController;
 use App\Http\Controllers\CvDataController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MaintanceController;
 use App\Http\Controllers\SimpleDataController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,7 +38,7 @@ Route::get('getcontactdata/',[ContactRequestController::class,'show']);
 Route::apiResource('home/{lang?}', HomeController::class);
 
 
-
+Route::post('sendmsg/', [MaintanceController::class, 'sendMessage']);
 
 
 
