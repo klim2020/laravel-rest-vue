@@ -1,3 +1,6 @@
+#Small Laravel+Vuejs Starter kit
+
+Client - Server with API 
 
 ### Back-end url
 
