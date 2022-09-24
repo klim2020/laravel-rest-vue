@@ -15,6 +15,8 @@ Client - Server with API
 
 ### Deploy Frontend
 
+!!!dont forget to commit all changes!!!
+
 ```cd resources/render/apivue/```
 ```sh sl run deploy```
 
