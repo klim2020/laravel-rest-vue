@@ -33,13 +33,12 @@ class MaintanceController extends Controller
                     '%name_val%'=>$validatedData['modal_form_name'],
                     '%phone_text%'=>'телефон',
                     '%phone_val%'=>$validatedData['modal_form_telephone']
-
         ]);
         $telegram->sendMsg($msg);
 
         return response()->json(array_merge(
-            ["xcrf" => csrf_token()],
-            $telegram->getInfo()
+            ["status"=>"success"],
+            ["data"=>$telegram->getInfo()]
         ));
     }
 
