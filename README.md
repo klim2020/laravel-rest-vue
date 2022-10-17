@@ -12,6 +12,7 @@ Client - Server with API
 
 ### Run sail container
 ```sh sl up -d```
+```docker exec -it laravel-rest-vue-laravel.test-1 bash```
 
 ### Deploy Frontend
 
