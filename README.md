@@ -27,3 +27,9 @@ Client - Server with API
 
 ```git push heroku master:main```
 
+### TODO
+
+    - cannot provide a link to  a portfolie, or different language 
+
+*Example [language](https://klim2020.github.io/#/en) or [portfolio](https://klim2020.github.io/#/cv/pl)*
+
