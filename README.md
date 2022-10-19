@@ -19,7 +19,7 @@ Client - Server with API
 !!!dont forget to commit all changes!!!
 
 ```cd resources/render/apivue/```
-```sh sl run deploy```
+```npm run deploy```   - problems with deploy 
 
 ### Deploy Backend
 
@@ -33,3 +33,13 @@ Client - Server with API
 
 *Example [language](https://klim2020.github.io/#/en) or [portfolio](https://klim2020.github.io/#/cv/pl)*
 
+    -[fixed]cannot start dev/server/postgres locally
+
+
+### Test Server
+
+    ```cp .env.example .env```
+
+    ```sh sl up -d```-run back
+
+    ```docker exec -it laravel-rest-vue-laravel.test-1 bash``` - enter enviropment
