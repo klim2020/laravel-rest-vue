@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Error;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -17,6 +18,7 @@ class DatabaseSeeder extends Seeder
         // \App\Models\User::factory(10)->create();
         $this->call(CvDataSeeder::class);
         $this->call(HomeSeeder::class);
+        $this->call(ErrorSeeder::class);
        // $this->call(HomeSeeder::class);
     }
 }

@@ -15,3 +15,5 @@ class CvData extends Model
         'value' //значения аттрибута -
     ];
 }
+
+

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ErrorController;
 use App\Http\Controllers\MaintanceController;
 use App\Http\Middleware\CheckForHiddenField;
 use App\Http\Middleware\VerifyCsrfToken;
@@ -31,5 +32,7 @@ Route::middleware([
     Route::post('sendmsg/', [MaintanceController::class, 'sendMessage']);
 
 });
+
+Route::get('/getErrors/{lang}', [ErrorController::class,'index']);
 
 Route::get('/token',function () {return response()->json(["xcrf"=>csrf_token()]);});

@@ -155,11 +155,11 @@ class HomeSeeder extends Seeder
         "cf_desc"=>"<h4
                         class=\"pt-6 text-center font-header text-xl font-medium text-black sm:text-2xl lg:text-3xl\"
                     >
-                        Якшо э питання
+                        Якшо є питання
                     </h4>
                     <div class=\"mx-auto w-full pt-5 text-center sm:w-2/3 lg:pt-6\">
                         <p class=\"font-body text-grey-10\">
-                            Будь ласка залиште їх тут, і я обов'язково зв'яжусь з вами
+                            Будь ласка залиште їх тут, і я обов'язково з вами зв'яжусь
                         </p>
                     </div>",
         "cf_input_name"=>"Им'я",
@@ -238,6 +238,7 @@ class HomeSeeder extends Seeder
             "pl"=>$this->items_pl,
             "ua"=>$this->items_ua
         );
+
         foreach($items as $lang=>$value){
             foreach ($value as $key=>$item){
                 $isarray = is_array($item);
