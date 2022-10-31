@@ -35,6 +35,8 @@ Client - Server with API
 
     -[fixed]cannot start dev/server/postgres locally
 
+    -[front] Move CF To Component
+
 
 ### Test Server
 
