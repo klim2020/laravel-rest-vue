@@ -10,7 +10,8 @@ class TelegramMessageCallBackTemplate extends TelegramMessage
      */
     public function initTemplate()
     {
-        return "ℹ️ %header_text% ℹ️
+
+    return "ℹ️ %header_text% ℹ️
 
 🙋‍♂️ %name_text%:%name_val%
 

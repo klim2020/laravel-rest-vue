@@ -78,11 +78,67 @@
 </template>
 
 <script>
+import validator from "validator";
+import {POSITION, TYPE, useToast} from "vue-toastification";
+import dataService from "@/libs/dataService";
+import errorService from "@/libs/errorService";
+import languageProvider from "@/libs/languageProvider";
+
 export default {
     name: "ContactForm",
+    data() {
+        return{
+          errorData:[],
+        }
+    },
     props:[`homedata`,`contacts`],
     methods:{
-        sendContactData(){}
+        sendContactData(){
+
+            let errors = [];
+            let form ={
+                modal_form_name :document.querySelector("#form-name").value,
+                modal_form_telephone : document.querySelector("#form-phone").value,
+                modal_form_email : document.querySelector("#form-email").value,
+                modal_form_msg : document.querySelector("#form-message").value,
+            };
+            if (!validator.isEmail(form.email)){errors.push(this.errorData.error_email[0])}
+            if (!validator.isMobilePhone(form.phone)){errors.push(this.errorData.error_phone[0])}
+            if (!validator.isLength(form.msg,{min:20, max: undefined})){errors.push(this.errorData.error_message[0])}
+            if (!validator.isAlpha(form.name)){errors.push(this.errorData.error_name[0])}
+            const toast = useToast();
+            if(errors.length>0){
+                toast("Error: " + errors.join('|| '), {
+                    position: POSITION.TOP_CENTER,
+                    type:TYPE.ERROR,
+
+                    toastClassName: "top-16",
+                    timeout: 10000});
+            }else{
+                toast("Everything is ok please wait while we send your request to a server: ", {
+                    position: POSITION.TOP_CENTER,
+                    type:TYPE.SUCCESS,
+
+                    toastClassName: "top-16",
+                    timeout: 10000});
+            }
+            dataService.sendContactRequest(form)
+
+
+
+
+        },
+    },
+
+    mounted() {
+        languageProvider.onLanguageChange(async ()=>{
+            this.errorData = await errorService.getData();
+        });
+        errorService.getData().then(data=>{
+            this.errorData = data;
+
+        });
+
     }
 }
 </script>

@@ -42,4 +42,28 @@ class MaintanceController extends Controller
         ));
     }
 
+
+    public function sendContactData(ContactFormRequest $request, TelegramService $telegram, TelegramMessageCallBackTemplate $msgtpl){
+
+        //name and phone is correct
+        $validatedData = $request->validated();
+        // Имя:{$validatedData['modal_form_name']}
+        //📞Телефон:{$validatedData['modal_form_telephone']}
+        //dd($request->session()->token());
+        $msg = $msgtpl->getMessage([
+            '%header_text%'=>'Внимание прилетела заявка c сайта-портфолио email - '.$validatedData['modal_form_email'].' сообщение - '.$validatedData['modal_form_message'],
+            '%name_text%'=>'Имя',
+            '%name_val%'=>$validatedData['modal_form_name'],
+            '%phone_text%'=>'телефон',
+            '%phone_val%'=>$validatedData['modal_form_telephone']
+        ]);
+        $telegram->sendMsg($msg);
+
+        return response()->json(array_merge(
+            ["status"=>"success"],
+            ["data"=>$telegram->getInfo()]
+        ));
+    }
+
+
 }

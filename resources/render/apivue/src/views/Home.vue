@@ -151,6 +151,8 @@
 
 
         <contact-form :homedata="homedata" :contacts="contacts"></contact-form>
+
+
     </div>
 </template>
 
@@ -184,41 +186,7 @@ export default {
 
       },
 
-      sendContactData(){
 
-        let errors = [];
-        let form ={
-             name :document.querySelector("#form-name").value,
-             phone : document.querySelector("#form-phone").value,
-             email : document.querySelector("#form-email").value,
-             msg : document.querySelector("#form-message").value,
-        };
-        if (!validator.isEmail(form.email)){errors.push("Please enter a valid email")};
-        if (!validator.isMobilePhone(form.phone)){errors.push("Please enter a valid phone")};
-        if (!validator.isLength(form.msg,{min:20, max: undefined})){errors.push("Please provide a Message")};
-        if (!validator.isAlpha(form.name)){errors.push("Please provide a valid name")};
-        const toast = useToast();
-        if(errors.length>0){
-            toast("Error: " + errors.join('|| '), {
-                position: POSITION.TOP_CENTER,
-                type:TYPE.ERROR,
-
-                toastClassName: "top-16",
-                timeout: 10000});
-        }else{
-            toast("Everything is ok please wait while we send your request to a server: ", {
-                position: POSITION.TOP_CENTER,
-                type:TYPE.SUCCESS,
-
-                toastClassName: "top-16",
-                timeout: 10000});
-        }
-        dataService.sendContactRequest(form)
-
-
-
-
-      },
       scrollTo(id){
            document.querySelector(id).scrollIntoView({behavior: 'smooth'});
       },

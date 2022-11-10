@@ -31,8 +31,11 @@ Route::middleware([
 
     Route::post('sendmsg/', [MaintanceController::class, 'sendMessage']);
 
+    Route::post('sendcontactdata/', [MaintanceController::class, 'sendContactData']);
+
 });
 
 Route::get('/getErrors/{lang}', [ErrorController::class,'index']);
 
 Route::get('/token',function () {return response()->json(["xcrf"=>csrf_token()]);});
+

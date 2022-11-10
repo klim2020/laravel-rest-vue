@@ -35,10 +35,23 @@ export default {
         return await ret;
     },
 
-    sendContactRequest(form){
-        return form;
+    sendContactRequest(data){
+        data.user__name = '';//adds a field for checking
+        fetch(this.url+"/api/sendcontactdata/", {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        }).then(res => {
+            console.log("Request complete! response:", res);
+        });
+        return data;
     },
 
 
+    async getErrors(lang = 'ru') {
 
+        let ret =  await (await fetch(this.url + '/api/getErrors/' + lang)).json();
+
+        return await ret;
+    }
 }
