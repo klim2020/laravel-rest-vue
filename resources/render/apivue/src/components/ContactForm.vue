@@ -28,6 +28,7 @@
                     :placeholder="this.homedata.cf_input_phone[0]"
                     type="text"
                     id="form-phone"
+                    v-mask="['+38(0##)###-##-##', '##.###.###/####-##']"
                 />
             </div>
 
@@ -78,6 +79,7 @@
 </template>
 
 <script>
+import {mask} from 'vue-the-mask'
 import validator from "validator";
 import {POSITION, TYPE, useToast} from "vue-toastification";
 import dataService from "@/libs/dataService";
@@ -85,6 +87,7 @@ import errorService from "@/libs/errorService";
 import languageProvider from "@/libs/languageProvider";
 
 export default {
+    directives: {mask},
     name: "ContactForm",
     data() {
         return{
@@ -102,10 +105,10 @@ export default {
                 modal_form_email : document.querySelector("#form-email").value,
                 modal_form_msg : document.querySelector("#form-message").value,
             };
-            if (!validator.isEmail(form.email)){errors.push(this.errorData.error_email[0])}
-            if (!validator.isMobilePhone(form.phone)){errors.push(this.errorData.error_phone[0])}
-            if (!validator.isLength(form.msg,{min:20, max: undefined})){errors.push(this.errorData.error_message[0])}
-            if (!validator.isAlpha(form.name)){errors.push(this.errorData.error_name[0])}
+            if (!validator.isEmail(form.modal_form_email)){errors.push(this.errorData.error_email[0])}
+            if (!validator.isMobilePhone(form.modal_form_telephone,['uk-UA'])){errors.push(this.errorData.error_phone[0])}
+            if (!validator.isLength(form.modal_form_msg,{min:20, max: undefined})){errors.push(this.errorData.error_message[0])}
+            if (!validator.isAlpha(form.modal_form_name)){errors.push(this.errorData.error_name[0])}
             const toast = useToast();
             if(errors.length>0){
                 toast("Error: " + errors.join('|| '), {

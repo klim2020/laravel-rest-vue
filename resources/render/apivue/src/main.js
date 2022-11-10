@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
-
+import { input_mask } from './directives/input-mask';
 
 
 
@@ -16,7 +16,7 @@ import "vue-toastification/dist/index.css";
 
 let app = createApp(App);
 
-
+app.directive('input-mask', input_mask);
 
 app = app.use(router);
 

@@ -37,7 +37,7 @@ export default {
 
     sendContactRequest(data){
         data.user__name = '';//adds a field for checking
-        fetch(this.url+"/api/sendcontactdata/", {
+        fetch(this.url+"/api/sendcontactdata", {
             method: "POST",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)

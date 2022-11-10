@@ -28,6 +28,6 @@ export default {
 
     sendContactRequest(form) {
         return dataProvider.sendContactRequest(form);
-
+        //return form;
     }
 }

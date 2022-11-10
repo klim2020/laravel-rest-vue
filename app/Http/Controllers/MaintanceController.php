@@ -43,10 +43,10 @@ class MaintanceController extends Controller
     }
 
 
-    public function sendContactData(ContactFormRequest $request, TelegramService $telegram, TelegramMessageCallBackTemplate $msgtpl){
+    public function sendContactData(Request $request, TelegramService $telegram, TelegramMessageCallBackTemplate $msgtpl){
 
         //name and phone is correct
-        $validatedData = $request->validated();
+        $validatedData = $request;
         // Имя:{$validatedData['modal_form_name']}
         //📞Телефон:{$validatedData['modal_form_telephone']}
         //dd($request->session()->token());
