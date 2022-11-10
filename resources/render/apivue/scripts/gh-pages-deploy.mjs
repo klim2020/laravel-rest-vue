@@ -15,7 +15,7 @@ import fs from 'fs';
 
             await execa("git", ["checkout", "--orphan", "gh-pages"]);
             // eslint-disable-next-line no-console
-            console.log("Building started...");
+            console.log("Building started..."+folderName);
             await execa("npm", ["run", "build"]);
 
             // Understand if it's dist or build folder
