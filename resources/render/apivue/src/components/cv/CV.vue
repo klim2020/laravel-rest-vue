@@ -40,6 +40,7 @@ export default {
     watch:{
         $route (){
             this.getData();
+            
         },
         cvdata2(){
             if (this.homedata != false ) {
@@ -65,12 +66,12 @@ export default {
         exportToPDF:function () {
 
             html2pdf(this.$refs.document, {
-                margin: [0, -0.08],
+                margin: [0.1, -0.08],
                 filename: 'document.pdf',
                 image: { type: 'jpeg', quality: 0.98 },
                 html2canvas: { dpi: 192, letterRendering: true },
-                //jsPDF: { unit: 'in', format: 'a4', orientation: 'landscape' }
-                jsPDF: { unit: 'in', format: [16.54,11.69], orientation: 'landscape' },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                //jsPDF: { unit: 'in', format: [16.54,11.69], orientation: 'landscape' },
                 pagebreak: {before: '.newPage', avoid: ['h2', 'h3', 'h4', '.field']},
             })
         }

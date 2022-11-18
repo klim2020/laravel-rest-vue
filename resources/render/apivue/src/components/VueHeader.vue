@@ -2,9 +2,7 @@
 
         <div :class="{'sticky top-0':scrolled}"
              :style="{'top':'-'+(!scrolled)*100+'px'}"
-             style="z-index:99999" class="bg-emerald-400 text-white
-                                                            transition-all ease-in-out delay-300 duration-2000
-                                                            ">
+             style="z-index:99999" class="bg-emerald-400 text-white transition-all ease-in-out delay-300 duration-2000">
 
             <nav class="flex container mx-auto px-5 py-5">
                 <ul class="flex flex-grow space-x-4">
@@ -15,7 +13,7 @@
                         >
               <span
                   class="text-white hover:text-gray-300 text-2xl font-semibold py-1"
-              >klim.ml</span
+              ><a href="https://www.klim2020.github.io">klim.ml</a></span
               >
                         </a>
                     </li>
@@ -95,17 +93,16 @@
                                     </h3>
                                 </li>
                                 <li class="flex border-t">
-                                    <a
-                                        href="/"
+                                    <router-link
+                                        to="/"
                                         class="flex flex-1 text-lg text-gray-700 hover:bg-white font-semibold px-8 py-4"
-                                    >Home</a
-                                    >
+                                    >Home</router-link>
                                 </li>
                                 <li class="flex">
-                                    <a
-                                        href="/cv"
+                                    <router-link
+                                        to="/cv"
                                         class="flex flex-1 text-lg text-gray-700 hover:bg-white font-semibold px-8 py-4"
-                                    >Portfolio</a
+                                    >Portfolio</router-link
                                     >
                                 </li>
                                 <li class="flex">

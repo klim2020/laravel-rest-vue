@@ -22,9 +22,14 @@ $max-md : '768px';
 
 }
 
+.mobile-hidden{
+    @media (max-width: 768px) {
+        display:none;
+    }
+}
+
 // стилизация печатных элементов
 :deep(a, a) {
-
     @apply text-sky-900 underline font-mono font-bold;
 }
 
