@@ -40,7 +40,7 @@ export default {
     watch:{
         $route (){
             this.getData();
-            
+
         },
         cvdata2(){
             if (this.homedata != false ) {
