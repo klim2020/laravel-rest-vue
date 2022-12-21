@@ -220,7 +220,7 @@ export default {
     //this.image = './img/'+this.getRand();
   },
   mounted(){
-    //console.log("home");
+    console.log("home");
     dataService.switchPage('home');
     this.getContacts();
     this.getData();
