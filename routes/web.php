@@ -1,10 +1,5 @@
 <?php
 
-use App\Http\Controllers\ContactRequestController;
-use App\Http\Controllers\CvDataController;
-use App\Http\Controllers\HomeController;
-use App\Http\Controllers\MaintanceController;
-use App\Http\Controllers\SimpleDataController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,26 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('vue.index');
+    return view('welcome');
 });
-Route::apiResource('simpldata', SimpleDataController::class);
 
-Route::get('getcontacts/{lang?}', [CvDataController::class, 'contacts']);
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
 
-
-Route::get('token/',function(){ return response()->json(["xcrf"=>csrf_token()]);});
-
-Route::get('cv/{lang?}', [CvDataController::class, 'index'] );
-
-
-Route::post('addcontacts/',[ContactRequestController::class,'index']);
-
-Route::get('getcontactdata/',[ContactRequestController::class,'show']);
-
-Route::apiResource('home/{lang?}', HomeController::class);
-
-
-Route::post('sendmsg/', [MaintanceController::class, 'sendMessage']);
-
-
-
+require __DIR__.'/auth.php';

@@ -1,6 +1,4 @@
 const mix = require('laravel-mix');
-path = require('path');
-
 
 /*
  |--------------------------------------------------------------------------
@@ -13,20 +11,7 @@ path = require('path');
  |
  */
 
-/*mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);*/
-
-mix.alias({
-    //'vue$': 'vue/dist/vue.esm.js',
-    '@': path.resolve('resources/render/apivue/src')
-    //'ext': path.resolve('node_modules'),
-})
-mix.webpackConfig({
-    resolve: {
-        modules: ['resources/render/apivue/node_modules']
-    }
-});
-
-mix.js('resources/render/apivue/src/main.js', 'dist').setPublicPath('dist');
+mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
+    require('tailwindcss'),
+    require('autoprefixer'),
+]);

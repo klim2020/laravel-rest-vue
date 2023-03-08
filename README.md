@@ -45,3 +45,9 @@ Client - Server with API
     ```sh sl up -d```-run back
 
     ```docker exec -it laravel-rest-vue-laravel.test-1 bash``` - enter enviropment
+
+
+
+```sudo chmod -R 777 vite.config.js```
+
+
